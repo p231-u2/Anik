@@ -1,0 +1,120 @@
+body{
+    margin:0;
+    font-family:'Poppins',sans-serif;
+    background:linear-gradient(135deg,#ffe6eb,#f7f3f2);
+    overflow-x:hidden;
+    text-align:center;
+}
+
+/* Titles */
+.title{
+    font-family:'Pacifico',cursive;
+    font-size:3rem;
+    margin-top:60px;
+}
+
+.subtitle{
+    color:#555;
+    margin-bottom:40px;
+}
+
+/* Photo Cards */
+.photo-container{
+    display:flex;
+    justify-content:center;
+    gap:40px;
+    flex-wrap:wrap;
+    margin-bottom:50px;
+}
+
+.card{
+    width:250px;
+    height:330px;
+    overflow:hidden;
+    border-radius:15px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.15);
+    animation:float 4s ease-in-out infinite;
+}
+
+.card:nth-child(2){ animation-duration:5s; }
+.card:nth-child(3){ animation-duration:6s; }
+
+.card img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+/* Floating Animation */
+@keyframes float{
+    0%{ transform:translateY(0px); }
+    50%{ transform:translateY(-15px); }
+    100%{ transform:translateY(0px); }
+}
+
+/* Proposal Box */
+.proposal-box{
+    background:white;
+    padding:40px;
+    width:90%;
+    max-width:450px;
+    margin:auto;
+    border-radius:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.1);
+}
+
+.btn-group{
+    margin-top:25px;
+    display:flex;
+    justify-content:center;
+    gap:20px;
+}
+
+button{
+    padding:12px 30px;
+    border:none;
+    border-radius:30px;
+    font-weight:600;
+    cursor:pointer;
+    transition:0.2s;
+}
+
+#yesBtn{
+    background:#4CAF50;
+    color:white;
+}
+
+#noBtn{
+    background:#ff4d6d;
+    color:white;
+    position:relative;
+}
+
+/* SUCCESS SECTION */
+#success-section{
+    display:none;
+    position:fixed;
+    inset:0;
+    background:linear-gradient(135deg,#ffd6e0,#ffe6eb);
+    justify-content:center;
+    align-items:center;
+}
+
+.success-content{
+    background:white;
+    padding:40px;
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.2);
+    animation:fadeIn 0.8s ease forwards;
+}
+
+.gif{
+    width:280px;
+    margin:20px 0;
+    border-radius:12px;
+}
+
+@keyframes fadeIn{
+    from{ opacity:0; transform:scale(0.8);}
+    to{ opacity:1; transform:scale(1);}
+}
